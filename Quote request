@@ -1,0 +1,13 @@
+<?php 
+$product_code = $_POST['productCode'];
+$email = $_POST['email'];
+$name = $_POST['name'];
+$number = $_POST['number'];
+$quantity = $_POST['quantity'];
+$formcontent = "From: $name \n Number: $number \n Product Code: $product_code \n Product Quantity: $quantity";
+$recipient = "gbadamosimateen@gmail.com";
+$subject = "Quote Request";
+$mailheader = "From: $email \r\n";
+mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
+echo "Thank You!" 
+?>
